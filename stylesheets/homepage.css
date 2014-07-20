@@ -685,6 +685,18 @@ footer p:nth-child(2) {
 /********************************************************************************* ANIM SETUP PAGELOAD */
 /* line 239, ../sass/_animation.sass */
 .csstransforms3d {
+  /* header h1, header p
+   *   +transform-origin(top, center, 0)
+   *   +transform(rotateX(-90deg))
+   *
+   * header h1:nth-child(1) 
+   *   +animation(fall 0.5s ease-in 2.8s 1 normal, true)
+   *
+   * header p:nth-child(2)
+   *   +animation(fall 0.5s ease-in 3.2s 1 normal, true)
+   *
+   * header p:nth-child(3)  
+   *   +animation(swivel 2.5s ease-in-out 3.7s 1 normal, true) */
   /********************************************************************************* ANIM SETUP EXIT & OTHER */
 }
 /* line 240, ../sass/_animation.sass */
@@ -762,49 +774,15 @@ footer p:nth-child(2) {
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-/* line 269, ../sass/_animation.sass */
-.csstransforms3d header h1, .csstransforms3d header p {
-  -webkit-transform-origin: top center 0;
-  -moz-transform-origin: top center 0;
-  -ms-transform-origin: top center 0;
-  -o-transform-origin: top center 0;
-  transform-origin: top center 0;
-  -webkit-transform: rotateX(-90deg);
-  -moz-transform: rotateX(-90deg);
-  -ms-transform: rotateX(-90deg);
-  -o-transform: rotateX(-90deg);
-  transform: rotateX(-90deg);
-}
-/* line 273, ../sass/_animation.sass */
-.csstransforms3d header h1:nth-child(1) {
-  -webkit-animation: fall 0.5s ease-in 2.8s 1 normal;
-  animation: fall 0.5s ease-in 2.8s 1 normal;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-/* line 276, ../sass/_animation.sass */
-.csstransforms3d header p:nth-child(2) {
-  -webkit-animation: fall 0.5s ease-in 3.2s 1 normal;
-  animation: fall 0.5s ease-in 3.2s 1 normal;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-/* line 279, ../sass/_animation.sass */
-.csstransforms3d header p:nth-child(3) {
-  -webkit-animation: swivel 2.5s ease-in-out 3.7s 1 normal;
-  animation: swivel 2.5s ease-in-out 3.7s 1 normal;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-/* line 282, ../sass/_animation.sass */
-.csstransforms3d footer {
+/* line 284, ../sass/_animation.sass */
+.csstransforms3d footer, .csstransforms3d header {
   opacity: 0;
-  -webkit-animation: fade 0.5s ease-in 5.3s 1 normal;
-  animation: fade 0.5s ease-in 5.3s 1 normal;
+  -webkit-animation: fade 0.5s ease-in 2.5s 1 normal;
+  animation: fade 0.5s ease-in 2.5s 1 normal;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-/* line 288, ../sass/_animation.sass */
+/* line 290, ../sass/_animation.sass */
 .csstransforms3d .wobbling {
   display: inline-block;
   -webkit-transition: all 0.5s;
@@ -812,26 +790,26 @@ footer p:nth-child(2) {
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-/* line 292, ../sass/_animation.sass */
+/* line 294, ../sass/_animation.sass */
 .csstransforms3d .wobbling:hover {
   -webkit-animation: wobble 0.5s linear infinite;
   animation: wobble 0.5s linear infinite;
 }
-/* line 295, ../sass/_animation.sass */
+/* line 297, ../sass/_animation.sass */
 .csstransforms3d .rotfadeout {
   -webkit-animation: scalefade 0.8s ease-in;
   animation: scalefade 0.8s ease-in;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-/* line 298, ../sass/_animation.sass */
+/* line 300, ../sass/_animation.sass */
 .csstransforms3d .rotfadein {
   -webkit-animation: rotfadeoutreverse 1.8s ease-in;
   animation: rotfadeoutreverse 1.8s ease-in;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-/* line 301, ../sass/_animation.sass */
+/* line 303, ../sass/_animation.sass */
 .csstransforms3d .fadeout {
   -webkit-animation: fade 0.5s ease-in 1 alternate;
   animation: fade 0.5s ease-in 1 alternate;
