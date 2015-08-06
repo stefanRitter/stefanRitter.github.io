@@ -459,9 +459,8 @@ var more = document.querySelectorAll('.more');
 for (var i = 0; i < more.length; i++) {
 	var elem = more[i];
 	elem.onclick = function(e){
-			console.log(e)
       e.preventDefault();
-			console.log($(e.currentTarget).parent().parent());
+			$(e.currentTarget).parent().parent().addClass('extended');
     };
 }
 
