@@ -455,7 +455,8 @@ angered conservative parties for their advertisements, <a href="http://www.nytim
 
 <script type="text/javascript">
 $('.more').on('click', function (e) {
-	$(e.currentTarget).parentsUntil('article').parent().addClass('extended');
+	e.preventDefault();
+	$(e.currentTarget).parent().parent().addClass('extended');
 });
 </script>
 
