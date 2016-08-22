@@ -30,9 +30,11 @@
         word-wrap: break-word;
       }
       main {
+        position: relative;
         margin: 0 auto;
         max-width: 450px;
         padding: 15px;
+        padding-top: 29px;
       }
       h1 {
         font-family: Helvetica,sans-serif;
@@ -62,13 +64,38 @@
       footer a {
         text-decoration: none;
       }
+      .profilepic {
+        display: block;
+        position: absolute;
+        top: 75px;
+        left: -210px;
+        width: 180px;
+        border-radius: 50%;
+      }
+      @media (max-width: 945px) {
+        main {
+          padding-top: 15px;
+        }
+        .profilepic {
+          position: static;
+          width: 140px;
+          margin: 0 auto;
+        }
+        h1 {
+          margin-top: 20px;
+          text-align: center;
+        }
+        strong {
+          font-weight: normal;
+        }
+      }
     </style>
   </head>
 
   <body>
-    <side>
-    </side>
     <main>
+      <img class="profilepic" src="stefanritter.jpg" alt="Stefan Ritter" />
+
       <h1>Stefan Ritter</h1>
 
       <p class="socialaccounts">
@@ -113,16 +140,16 @@
       </p>
 
       <p>
-        I'm a designer turned developer<!-- turned <br>product manager-->.
+        <strong>I'm a designer turned developer<!-- turned <br>product manager-->.</strong>
       </p>
 
       <p>
-        Currently, I'm at <a href="https://icn.sap.com/" target="_blank">SAP</a>, where I focus on bringing consumer-grade UX to enterprise software.
+        Currently, I'm at <a href="https://icn.sap.com/" target="_blank">SAP</a>, where I focus on revolutionising the UX for enterprise software.
       </p>
 
       <p>
         Previously, I was an analytics and user testing consultant at the <a href="http://developers.nytimes.com/" target="_blank" title="New York Times">New York Times</a>,
-        I tought design at <a href="https://www.ucl.ac.uk/" target="_blank" title="University College London">University College London</a>,
+        I taught design at <a href="https://www.ucl.ac.uk/" target="_blank" title="University College London">University College London</a>,
         and was lead frontend engineer at <a href="http://www.escapethecity.org/" target="_blank" title="Escape The City">Escape</a>.
       </p>
 
@@ -142,12 +169,12 @@
     </main>
 
     <script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-			ga('create', 'UA-37404240-1', 'auto');
-			ga('send', 'pageview');
-		</script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-37404240-1', 'auto');
+      ga('send', 'pageview');
+    </script>
   </body>
 </html>
