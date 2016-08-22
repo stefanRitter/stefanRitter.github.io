@@ -36,37 +36,47 @@
         padding: 15px;
         padding-top: 29px;
       }
+      h4, h1 {
+        font-family: Helvetica,sans-serif;
+        letter-spacing: -.02em;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 28px;
+        margin-left: -1.5px;
+        line-height: 1.22;
+        letter-spacing: -.018em;
+      }
       h1 {
         font-family: Helvetica,sans-serif;
+        font-size: 44px;
+        margin-bottom: 5px;
       }
       a {
         color: rgba(0,0,0,0.8);
         text-decoration: none;
-        background-image: linear-gradient(to bottom,rgba(0,0,0,0) 50%,rgba(0,0,0,.6) 50%);
-        background-repeat: repeat-x;
-        background-size: 2px .1em;
-        background-position: 0 1.05em;
+        border-bottom: 1px dotted rgba(0,0,0,0.8);
       }
-      a.medium-link {
+      /*a.medium-link {
         opacity: 0.7;
         color: #02B875;
-        background-image: linear-gradient(to bottom,rgba(0,0,0,0) 50%,#02B875 50%);
+        border-bottom: 1px dotted #02B875;
       }
       a.linkedin-link {
         opacity: 0.7;
         color: #0077B5;
-        background-image: linear-gradient(to bottom,rgba(0,0,0,0) 50%,#0077B5 50%);
-      }
+        border-bottom: 1px dotted #0077B5;
+      }*/
       em {
-        color: #DA552F;
-        font-weight: bold;
+        color: #7C9DBE; /*#DA552F;*/
+        font-style: normal;
       }
-      p {
-        word-wrap: break-word;
+      .socialaccounts {
+        margin-top: 0;
+        opacity: 0.5;
       }
       .socialaccounts a {
         display: inline-block;
-        background: transparent;
+        border-bottom: 0;
         padding-right: 5px;
       }
       .svgIcon {
@@ -74,6 +84,15 @@
       }
       footer, p {
         margin: 29px 0 0 0;
+      }
+      .first-p {
+        font-size: 24px;
+      }
+      .second-p {
+        font-size: 20px;
+      }
+      .third-p {
+        font-size: 16px;
       }
       footer {
         font-size: 12px;
@@ -90,6 +109,9 @@
       @media (max-width: 945px) {
         main {
           padding-top: 15px;
+        }
+        .socialaccounts {
+          text-align: center;
         }
         .profilepic {
           position: static;
@@ -142,7 +164,7 @@
         <a href="http://www.producthunt.com/@stefanritter" target="_blank" title="ProductHunt">
           <svg class="svgIcon" width="32px" height="26px" viewBox="0 0 40 40">
             <g fill="none" fill-rule="evenodd">
-              <path d="M40 20c0 11.046-8.954 20-20 20S0 31.046 0 20 8.954 0 20 0s20 8.954 20 20" fill="#DA552F"></path>
+              <path d="M40 20c0 11.046-8.954 20-20 20S0 31.046 0 20 8.954 0 20 0s20 8.954 20 20" fill="rgba(0,0,0,0.8)"></path>
               <path d="M22.667 20H17v-6h5.667c1.656 0 3 1.343 3 3s-1.344 3-3 3m0-10H13v20h4v-6h5.667c3.866 0 7-3.134 7-7s-3.134-7-7-7" fill="#FFF"></path>
             </g>
           </svg>
@@ -154,23 +176,28 @@
         </a>
       </p>
 
-      <p>
-        <strong>I'm a designer turned developer<!-- turned <br>product manager-->.</strong>
+      <h4>
+        I'm a designer turned developer<!-- turned <br>product manager-->.
+      </h4>
+
+      <p class="first-p">
+        <em>Currently</em>, I'm at <a href="https://icn.sap.com/" target="_blank">SAP</a> bringing consumer-grade UX to enterprise software.
       </p>
 
+      <p class="second-p">
+        <em>Previously:</em>
+        <br>
+        Analytics Consultant @ <a href="http://developers.nytimes.com/" target="_blank" title="New York Times">New York Times</a>
+        <br>
+        Design Tutor @ <a href="https://www.ucl.ac.uk/" target="_blank" title="University College London">University College London</a>
+        <br>
+        Lead Front-end Developer @ <a href="http://www.escapethecity.org/" target="_blank" title="Escape The City">Escape</a>
       <p>
-        Currently, I'm at <a href="https://icn.sap.com/" target="_blank">SAP</a>, where I focus on revolutionising the UX of enterprise software.
-      </p>
 
-      <p>
-        Previously, I was <em>Analytics</em> and User Testing Consultant at the <a href="http://developers.nytimes.com/" target="_blank" title="New York Times">New York Times</a>,
-        I taught <em>Design</em> at <a href="https://www.ucl.ac.uk/" target="_blank" title="University College London">University College London</a>,
-        and was lead Front-end <em>Engineer</em> at <a href="http://www.escapethecity.org/" target="_blank" title="Escape The City">Escape</a>.
-      </p>
-
-      <p>
-        Read about my experience on <a href="https://medium.com/@stefanritter" target="_blank" title="Medium" class="medium-link">Medium</a>,
-        or connect with me on <a href="https://www.linkedin.com/in/stefanritter" target="_blank" title="LinkedIn" class="linkedin-link">LinkedIn</a>.
+      <p class="third-p">
+        Read about my experience on <a href="https://medium.com/@stefanritter" target="_blank" title="Medium" class="medium-link">Medium</a>.
+        <br>
+        Connect with me on <a href="https://www.linkedin.com/in/stefanritter" target="_blank" title="LinkedIn" class="linkedin-link">LinkedIn</a>.
       </p>
 
       <footer>
