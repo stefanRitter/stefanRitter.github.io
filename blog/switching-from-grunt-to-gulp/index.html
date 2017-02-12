@@ -108,7 +108,7 @@
 <article class="post">
   <h1>Switching from Grunt to Gulp</h1>
   <p><time datetime="2014-04-06T00:00:00+00:00" class="page-date">06 Apr 2014</time></p>
-  <p>After publishing my <a href="/flightjs-part-1">tutorial on writing a chat app with flight</a>, I got a few requests on switching from Grunt to Gulp.</p>
+  <p>After publishing my <a href="/blog/flightjs-part-1">tutorial on writing a chat app with flight</a>, I got a few requests on switching from Grunt to Gulp.</p>
 
 <p>I decided to put them both in the repo to compare. In total the gulpfile is 23 lines shorter than the Gruntfile.</p>
 
@@ -118,40 +118,8 @@
 
 <p><a href="https://github.com/stefanRitter/flight-chat/blob/master/Gruntfile.js">Check out the Gruntfile.js here</a>. That’s 85 lines of code. Compared to 62 for the <a href="https://github.com/stefanRitter/flight-chat/blob/master/gulpfile.js">gulpfile.js</a>. What’s nice about Gulp is that the setup follows a more node-style syntax. Here’s a look at the structure of Gruntfile:</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34</pre></td><td class="code"><pre><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">grunt</span><span class="p">)</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">
+</pre></td><td class="code"><pre><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">grunt</span><span class="p">)</span> <span class="p">{</span>
   <span class="s1">'use strict'</span><span class="p">;</span>
 
   <span class="c1">// load all grunt tasks
@@ -193,33 +161,8 @@
 
 <p>And when you compare that to the structure of a gulpfile…</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27</pre></td><td class="code"><pre><span class="s1">'use strict'</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">
+</pre></td><td class="code"><pre><span class="s1">'use strict'</span><span class="p">;</span>
 
 <span class="kd">var</span> <span class="nx">gulp</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp'</span><span class="p">),</span>
     <span class="nx">compass</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp-compass'</span><span class="p">),</span>
@@ -258,7 +201,7 @@
 
 <aside>
   If you liked this post, please
-<a href="https://twitter.com/intent/tweet?url=http://react.careers//switching-from-grunt-to-gulp&text=Switching from Grunt to Gulp&via=stefanritter"
+<a href="https://twitter.com/intent/tweet?url=http://stefanritter.com/blog/switching-from-grunt-to-gulp&text=Switching from Grunt to Gulp&via=stefanritter"
    target="_blank">
   share it with your followers</a>
 or
