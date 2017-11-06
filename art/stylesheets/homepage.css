@@ -1,0 +1,818 @@
+/*
+ *  Hi there, have a look at my source files here:
+ *  https://github.com/stefanRitter/stefanRitter.github.io
+ *
+ */
+/* Global reset
+ * http://meyerweb.com/eric/tools/css/reset/
+ **************************************************************** */
+/* line 14, ../sass/_base.sass */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 22, ../sass/_base.sass */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 17, ../sass/homepage.sass */
+header h1, header p {
+  color: white;
+  background: #121212;
+  background: rgba(18, 18, 18, 0.8);
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  float: left;
+  clear: both;
+}
+
+/* line 43, ../sass/homepage.sass */
+html {
+  background: whitesmoke url(../images/bg.png) repeat;
+  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(10%, #ffffff), color-stop(100%, rgba(255, 255, 255, 0))) no-repeat center center fixed, whitesmoke url(../images/bg.png) repeat;
+  background: -webkit-linear-gradient(bottom, #ffffff 10%, rgba(255, 255, 255, 0) 100%) no-repeat center center fixed, whitesmoke url(../images/bg.png) repeat;
+  background: -moz-linear-gradient(bottom, #ffffff 10%, rgba(255, 255, 255, 0) 100%) no-repeat center center fixed, whitesmoke url(../images/bg.png) repeat;
+  background: -o-linear-gradient(bottom, #ffffff 10%, rgba(255, 255, 255, 0) 100%) no-repeat center center fixed, whitesmoke url(../images/bg.png) repeat;
+  background: linear-gradient(bottom, #ffffff 10%, rgba(255, 255, 255, 0) 100%) no-repeat center center fixed, whitesmoke url(../images/bg.png) repeat;
+  font-family: "Oxygen Mono", Helvetica, sans-serif;
+  overflow: hidden;
+}
+@media (max-width: 800px) {
+  /* line 43, ../sass/homepage.sass */
+  html {
+    overflow: visible;
+  }
+}
+
+@media (max-width: 800px) {
+  /* line 55, ../sass/homepage.sass */
+  body {
+    font-size: 90%;
+  }
+}
+@media (max-width: 480px) {
+  /* line 55, ../sass/homepage.sass */
+  body {
+    font-size: 85%;
+  }
+}
+
+/* line 61, ../sass/homepage.sass */
+body.ie {
+  position: relative;
+  overflow: auto;
+}
+
+/* line 66, ../sass/homepage.sass */
+.maintable {
+  height: 100%;
+  width: 70%;
+  display: table;
+  margin: 0 auto;
+}
+@media (max-width: 800px) {
+  /* line 66, ../sass/homepage.sass */
+  .maintable {
+    display: block;
+    width: 90%;
+  }
+}
+
+/* line 77, ../sass/homepage.sass */
+section {
+  display: table-cell;
+  vertical-align: middle;
+}
+@media (max-width: 800px) {
+  /* line 77, ../sass/homepage.sass */
+  section {
+    display: block;
+  }
+}
+
+/* line 83, ../sass/homepage.sass */
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* line 87, ../sass/homepage.sass */
+.loading {
+  visibility: hidden;
+  position: fixed;
+  top: 45%;
+  width: 100%;
+  text-align: center;
+}
+/* line 93, ../sass/homepage.sass */
+.loading img {
+  display: inline-block;
+  height: 3.5em;
+}
+
+/* line 99, ../sass/homepage.sass */
+header {
+  z-index: 3;
+  position: relative;
+  top: 0;
+}
+/* line 104, ../sass/homepage.sass */
+header h1 {
+  font-size: 1.5em;
+  padding: 1.5%;
+  margin: 0.2em 0;
+  text-transform: uppercase;
+}
+/* line 111, ../sass/homepage.sass */
+header p {
+  padding: 1.5%;
+  margin: 0.3em 0;
+}
+/* line 115, ../sass/homepage.sass */
+header p:nth-child(3) {
+  width: 97%;
+}
+/* line 120, ../sass/homepage.sass */
+header a:nth-child(1) {
+  color: #00aced;
+}
+/* line 122, ../sass/homepage.sass */
+header a:nth-child(2) {
+  color: #00aced;
+}
+/* line 124, ../sass/homepage.sass */
+header a:nth-child(3) {
+  color: #cb376e;
+}
+/* line 126, ../sass/homepage.sass */
+header a:nth-child(4) {
+  color: #00aced;
+}
+/* line 128, ../sass/homepage.sass */
+header a:nth-child(5) {
+  color: grey;
+}
+
+/* line 133, ../sass/homepage.sass */
+nav {
+  clear: both;
+  position: relative;
+  left: -10%;
+  width: 120%;
+}
+@media (max-width: 800px) {
+  /* line 133, ../sass/homepage.sass */
+  nav {
+    left: 0;
+    width: 100%;
+  }
+}
+
+/* line 144, ../sass/homepage.sass */
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+/* line 148, ../sass/homepage.sass */
+nav li {
+  z-index: 4;
+  float: left;
+  width: 18.4%;
+  height: 23em;
+  margin: 2% 0.8%;
+}
+@media (max-width: 800px) {
+  /* line 148, ../sass/homepage.sass */
+  nav li {
+    width: 32.26%;
+    margin: 2% 1.6% 0 0;
+  }
+  /* line 159, ../sass/homepage.sass */
+  nav li:nth-child(3), nav li:nth-child(5) {
+    margin-right: 0;
+  }
+  /* line 161, ../sass/homepage.sass */
+  nav li:nth-child(4), nav li:nth-child(5) {
+    width: 49.2%;
+  }
+}
+@media (max-width: 480px) {
+  /* line 148, ../sass/homepage.sass */
+  nav li {
+    width: 100%;
+    margin: 2% 0;
+  }
+  /* line 167, ../sass/homepage.sass */
+  nav li:nth-child(4), nav li:nth-child(5) {
+    width: 100%;
+  }
+}
+/* line 170, ../sass/homepage.sass */
+nav a {
+  overflow: hidden;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 1px 0 1px #515151, 0 1px 1px black, 2px 1px 1px #515151, 1px 2px 1px black, 3px 2px 1px #515151, 2px 3px 1px black, 4px 3px 1px #515151, 3px 4px 1px black, 5px 4px 1px #515151, 4px 5px 1px black, 6px 5px 1px #515151, 5px 6px 1px black;
+  -moz-box-shadow: 1px 0 1px #515151, 0 1px 1px black, 2px 1px 1px #515151, 1px 2px 1px black, 3px 2px 1px #515151, 2px 3px 1px black, 4px 3px 1px #515151, 3px 4px 1px black, 5px 4px 1px #515151, 4px 5px 1px black, 6px 5px 1px #515151, 5px 6px 1px black;
+  box-shadow: 1px 0 1px #515151, 0 1px 1px black, 2px 1px 1px #515151, 1px 2px 1px black, 3px 2px 1px #515151, 2px 3px 1px black, 4px 3px 1px #515151, 3px 4px 1px black, 5px 4px 1px #515151, 4px 5px 1px black, 6px 5px 1px #515151, 5px 6px 1px black;
+}
+
+/* line 178, ../sass/homepage.sass */
+.ie nav li {
+  width: 17%;
+}
+
+/* line 181, ../sass/homepage.sass */
+.unit15 {
+  background: black;
+}
+/* line 183, ../sass/homepage.sass */
+.unit15 img {
+  width: auto;
+  height: 100%;
+  position: relative;
+  left: -10em;
+}
+
+/* line 189, ../sass/homepage.sass */
+.portfolio {
+  background: #1e1e1e;
+}
+/* line 191, ../sass/homepage.sass */
+.portfolio img {
+  -webkit-transform: rotate(-90deg) translate(0, -15em);
+  -moz-transform: rotate(-90deg) translate(0, -15em);
+  -ms-transform: rotate(-90deg) translate(0, -15em);
+  -o-transform: rotate(-90deg) translate(0, -15em);
+  transform: rotate(-90deg) translate(0, -15em);
+  height: 100%;
+  width: auto;
+}
+@media (max-width: 480px) {
+  /* line 191, ../sass/homepage.sass */
+  .portfolio img {
+    -webkit-transform: rotate(-90deg) translate(0, -14em);
+    -moz-transform: rotate(-90deg) translate(0, -14em);
+    -ms-transform: rotate(-90deg) translate(0, -14em);
+    -o-transform: rotate(-90deg) translate(0, -14em);
+    transform: rotate(-90deg) translate(0, -14em);
+  }
+}
+
+/* line 200, ../sass/homepage.sass */
+.fleshscreen img {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 204, ../sass/homepage.sass */
+.qh {
+  background: #b7b7b7 url(../images/bg.png) repeat;
+  background: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, rgba(0, 172, 237, 0.3)), color-stop(100%, rgba(255, 255, 255, 0))) no-repeat, #9e9e9e url(../images/bg.png) repeat;
+  background: -webkit-linear-gradient(bottom, rgba(0, 172, 237, 0.3) 0%, rgba(255, 255, 255, 0) 100%) no-repeat, #9e9e9e url(../images/bg.png) repeat;
+  background: -moz-linear-gradient(bottom, rgba(0, 172, 237, 0.3) 0%, rgba(255, 255, 255, 0) 100%) no-repeat, #9e9e9e url(../images/bg.png) repeat;
+  background: -o-linear-gradient(bottom, rgba(0, 172, 237, 0.3) 0%, rgba(255, 255, 255, 0) 100%) no-repeat, #9e9e9e url(../images/bg.png) repeat;
+  background: linear-gradient(bottom, rgba(0, 172, 237, 0.3) 0%, rgba(255, 255, 255, 0) 100%) no-repeat, #9e9e9e url(../images/bg.png) repeat;
+}
+/* line 207, ../sass/homepage.sass */
+.qh img {
+  height: 100%;
+  width: auto;
+}
+
+/* line 212, ../sass/homepage.sass */
+.cream img {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 217, ../sass/homepage.sass */
+.icanvas img {
+  height: 100%;
+  width: auto;
+}
+@media (max-width: 800px) {
+  /* line 217, ../sass/homepage.sass */
+  .icanvas img {
+    width: 100%;
+  }
+}
+
+/* line 223, ../sass/homepage.sass */
+.linkname, .comingsoon {
+  display: block;
+  position: absolute;
+  bottom: 3em;
+  color: white;
+  background: #1e1e1e;
+  background: rgba(18, 18, 18, 0.8);
+  padding: 0.2em 0.3em;
+}
+
+/* line 232, ../sass/homepage.sass */
+.comingsoon {
+  background: #cb376e;
+  background: rgba(203, 55, 110, 0.8);
+}
+
+/* line 237, ../sass/homepage.sass */
+.newbackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.3;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: 0;
+}
+
+/* line 250, ../sass/homepage.sass */
+.ie .newbackground {
+  visibility: hidden;
+}
+
+/* line 255, ../sass/homepage.sass */
+footer {
+  z-index: 2;
+  clear: both;
+  position: relative;
+  bottom: 0;
+  padding-top: 1em;
+  text-align: justify;
+  font-size: 0.7em;
+}
+/* line 265, ../sass/homepage.sass */
+footer a {
+  color: black;
+  border-bottom: 1px dotted black;
+}
+/* line 268, ../sass/homepage.sass */
+footer p {
+  margin: 0.8em 0;
+}
+/* line 271, ../sass/homepage.sass */
+footer p:nth-child(2) {
+  float: none;
+}
+
+/*  Animations
+ *
+ *  Thanks to David DeSandro for his great 3d transforms introduction:
+ *  http://desandro.com/
+ */
+/********************************************************************************* ANIM DEF -webkit- */
+@-webkit-keyframes fall {
+  /* line 20, ../sass/_animation.sass */
+  0% {
+    -webkit-transform: rotateX(-90deg);
+  }
+
+  /* line 23, ../sass/_animation.sass */
+  100% {
+    -webkit-transform: rotateX(0);
+  }
+}
+
+/*  thanks to Tanner Smith this this one:
+ * http://codepen.io/Tanner/details/jJcCg */
+@-webkit-keyframes swivel {
+  /* line 31, ../sass/_animation.sass */
+  0% {
+    -webkit-transform: rotateX(-90deg);
+  }
+
+  /* line 34, ../sass/_animation.sass */
+  25% {
+    -webkit-transform: rotateX(40deg);
+  }
+
+  /* line 37, ../sass/_animation.sass */
+  50% {
+    -webkit-transform: rotateX(-25deg);
+  }
+
+  /* line 40, ../sass/_animation.sass */
+  75% {
+    -webkit-transform: rotateX(25deg);
+  }
+
+  /* line 43, ../sass/_animation.sass */
+  100% {
+    -webkit-transform: rotateX(0deg);
+  }
+}
+
+@-webkit-keyframes wobble {
+  /* line 49, ../sass/_animation.sass */
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  /* line 52, ../sass/_animation.sass */
+  25% {
+    -webkit-transform: rotate(-5deg);
+  }
+
+  /* line 55, ../sass/_animation.sass */
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  /* line 58, ../sass/_animation.sass */
+  75% {
+    -webkit-transform: rotate(5deg);
+  }
+
+  /* line 61, ../sass/_animation.sass */
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes fade {
+  /* line 67, ../sass/_animation.sass */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 70, ../sass/_animation.sass */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes scalefade {
+  /* line 76, ../sass/_animation.sass */
+  0% {
+    -webkit-transform: translateZ(500px) translateY(0px);
+    opacity: 1;
+  }
+
+  /* line 80, ../sass/_animation.sass */
+  100% {
+    -webkit-transform: translateZ(1300px) translateY(-100px);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes rotfade {
+  /* line 86, ../sass/_animation.sass */
+  0% {
+    -webkit-transform: translateZ(500px) translateY(0) rotateY(0deg) scaleX(1);
+  }
+
+  /* line 89, ../sass/_animation.sass */
+  30% {
+    -webkit-transform: translateZ(500px) translateY(0) rotateY(90deg) scaleX(1);
+    opacity: 1;
+  }
+
+  /* line 93, ../sass/_animation.sass */
+  50% {
+    opacity: 0;
+  }
+
+  /* line 96, ../sass/_animation.sass */
+  100% {
+    -webkit-transform: translateZ(4000px) translateY(-500px) rotateY(90deg) scaleX(20);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes rotfadeoutreverse {
+  /* line 103, ../sass/_animation.sass */
+  0% {
+    -webkit-transform: translateZ(4000px) translateY(-500px) rotateY(90deg) scaleX(20);
+    opacity: 0;
+  }
+
+  /* line 107, ../sass/_animation.sass */
+  70% {
+    -webkit-transform: translateZ(500px) translateY(0) rotateY(90deg) scaleX(1);
+  }
+
+  /* line 110, ../sass/_animation.sass */
+  100% {
+    -webkit-transform: translateZ(500px) translateY(0) rotateY(0deg) scaleX(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes intro {
+  /* line 117, ../sass/_animation.sass */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateZ(-500px) rotateY(180deg);
+  }
+
+  /* line 121, ../sass/_animation.sass */
+  50% {
+    opacity: 1;
+  }
+
+  /* line 124, ../sass/_animation.sass */
+  100% {
+    -webkit-transform: translateZ(-500px) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+/********************************************************************************* ANIM DEF W3C */
+@keyframes fade {
+  /* line 133, ../sass/_animation.sass */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 136, ../sass/_animation.sass */
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fall {
+  /* line 142, ../sass/_animation.sass */
+  0% {
+    transform: rotateX(-90deg);
+  }
+
+  /* line 145, ../sass/_animation.sass */
+  100% {
+    transform: rotateX(0);
+  }
+}
+
+@keyframes swivel {
+  /* line 151, ../sass/_animation.sass */
+  0% {
+    transform: rotateX(-90deg);
+  }
+
+  /* line 154, ../sass/_animation.sass */
+  25% {
+    transform: rotateX(40deg);
+  }
+
+  /* line 157, ../sass/_animation.sass */
+  50% {
+    transform: rotateX(-25deg);
+  }
+
+  /* line 160, ../sass/_animation.sass */
+  75% {
+    transform: rotateX(25deg);
+  }
+
+  /* line 163, ../sass/_animation.sass */
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes wobble {
+  /* line 169, ../sass/_animation.sass */
+  0% {
+    transform: rotate(0deg);
+  }
+
+  /* line 172, ../sass/_animation.sass */
+  25% {
+    transform: rotate(-4deg);
+  }
+
+  /* line 175, ../sass/_animation.sass */
+  50% {
+    transform: rotate(0deg);
+  }
+
+  /* line 178, ../sass/_animation.sass */
+  75% {
+    transform: rotate(4deg);
+  }
+
+  /* line 181, ../sass/_animation.sass */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes scalefade {
+  /* line 187, ../sass/_animation.sass */
+  0% {
+    transform: translateZ(500px) translateY(0px);
+    opacity: 1;
+  }
+
+  /* line 191, ../sass/_animation.sass */
+  100% {
+    transform: translateZ(1300px) translateY(-100px);
+    opacity: 0;
+  }
+}
+
+@keyframes rotfade {
+  /* line 198, ../sass/_animation.sass */
+  0% {
+    transform: translateZ(500px) translateY(0) rotateY(0deg) scaleX(1);
+  }
+
+  /* line 201, ../sass/_animation.sass */
+  30% {
+    transform: translateZ(500px) translateY(0) rotateY(90deg) scaleX(1);
+  }
+
+  /* line 204, ../sass/_animation.sass */
+  100% {
+    transform: translateZ(4000px) translateY(-500px) rotateY(90deg) scaleX(20);
+  }
+}
+
+@keyframes rotfadeoutreverse {
+  /* line 210, ../sass/_animation.sass */
+  0% {
+    transform: translateZ(4000px) translateY(-500px) rotateY(90deg) scaleX(20);
+    opacity: 0;
+  }
+
+  /* line 214, ../sass/_animation.sass */
+  70% {
+    transform: translateZ(500px) translateY(0) rotateY(90deg) scaleX(1);
+  }
+
+  /* line 217, ../sass/_animation.sass */
+  100% {
+    transform: translateZ(500px) translateY(0) rotateY(0deg) scaleX(1);
+    opacity: 1;
+  }
+}
+
+@keyframes intro {
+  /* line 224, ../sass/_animation.sass */
+  0% {
+    opacity: 0;
+    transform: translateZ(-500px) rotateY(180deg);
+  }
+
+  /* line 228, ../sass/_animation.sass */
+  50% {
+    opacity: 1;
+  }
+
+  /* line 231, ../sass/_animation.sass */
+  100% {
+    transform: translateZ(-500px) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+/********************************************************************************* ANIM SETUP PAGELOAD */
+/* line 239, ../sass/_animation.sass */
+.csstransforms3d {
+  /* header h1, header p
+   *   +transform-origin(top, center, 0)
+   *   +transform(rotateX(-90deg))
+   *
+   * header h1:nth-child(1)
+   *   +animation(fall 0.5s ease-in 2.8s 1 normal, true)
+   *
+   * header p:nth-child(2)
+   *   +animation(fall 0.5s ease-in 3.2s 1 normal, true)
+   *
+   * header p:nth-child(3)
+   *   +animation(swivel 2.5s ease-in-out 3.7s 1 normal, true) */
+  /********************************************************************************* ANIM SETUP EXIT & OTHER */
+}
+/* line 240, ../sass/_animation.sass */
+.csstransforms3d nav ul {
+  -webkit-perspective-origin: 50% 100%;
+  -moz-perspective-origin: 50% 100%;
+  -ms-perspective-origin: 50% 100%;
+  -o-perspective-origin: 50% 100%;
+  perspective-origin: 50% 100%;
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -ms-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+}
+/* line 244, ../sass/_animation.sass */
+.csstransforms3d nav li {
+  opacity: 0;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(-500px) rotateY(0deg);
+  -moz-transform: translateZ(-500px) rotateY(0deg);
+  -ms-transform: translateZ(-500px) rotateY(0deg);
+  -o-transform: translateZ(-500px) rotateY(0deg);
+  transform: translateZ(-500px) rotateY(0deg);
+}
+/* line 250, ../sass/_animation.sass */
+.csstransforms3d nav li a {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateY(0deg) translateZ(500px);
+  -moz-transform: rotateY(0deg) translateZ(500px);
+  -ms-transform: rotateY(0deg) translateZ(500px);
+  -o-transform: rotateY(0deg) translateZ(500px);
+  transform: rotateY(0deg) translateZ(500px);
+}
+/* line 254, ../sass/_animation.sass */
+.csstransforms3d nav li:nth-child(1) {
+  -webkit-animation: intro 2s ease-in-out 0.1s;
+  animation: intro 2s ease-in-out 0.1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+/* line 257, ../sass/_animation.sass */
+.csstransforms3d nav li:nth-child(2) {
+  -webkit-animation: intro 2s ease-in-out 0.2s;
+  animation: intro 2s ease-in-out 0.2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+/* line 260, ../sass/_animation.sass */
+.csstransforms3d nav li:nth-child(3) {
+  -webkit-animation: intro 2s ease-in-out 0.4s;
+  animation: intro 2s ease-in-out 0.4s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+/* line 263, ../sass/_animation.sass */
+.csstransforms3d nav li:nth-child(4) {
+  -webkit-animation: intro 2s ease-in-out 0.6s;
+  animation: intro 2s ease-in-out 0.6s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+/* line 266, ../sass/_animation.sass */
+.csstransforms3d nav li:nth-child(5) {
+  -webkit-animation: intro 2s ease-in-out 0.8s;
+  animation: intro 2s ease-in-out 0.8s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+/* line 284, ../sass/_animation.sass */
+.csstransforms3d footer, .csstransforms3d header {
+  opacity: 0;
+  -webkit-animation: fade 0.5s ease-in 2.5s 1 normal;
+  animation: fade 0.5s ease-in 2.5s 1 normal;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+/* line 290, ../sass/_animation.sass */
+.csstransforms3d .wobbling {
+  display: inline-block;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* line 294, ../sass/_animation.sass */
+.csstransforms3d .wobbling:hover {
+  -webkit-animation: wobble 0.5s linear infinite;
+  animation: wobble 0.5s linear infinite;
+}
+/* line 297, ../sass/_animation.sass */
+.csstransforms3d .rotfadeout {
+  -webkit-animation: scalefade 0.8s ease-in;
+  animation: scalefade 0.8s ease-in;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+/* line 300, ../sass/_animation.sass */
+.csstransforms3d .rotfadein {
+  -webkit-animation: rotfadeoutreverse 1.8s ease-in;
+  animation: rotfadeoutreverse 1.8s ease-in;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+/* line 303, ../sass/_animation.sass */
+.csstransforms3d .fadeout {
+  -webkit-animation: fade 0.5s ease-in 1 alternate;
+  animation: fade 0.5s ease-in 1 alternate;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
